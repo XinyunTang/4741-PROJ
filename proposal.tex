@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}%
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm]%
+{geometry}
+\usepackage{indentfirst}
+% \usepackage{times}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\setcounter{MaxMatrixCols}{30}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\usepackage{hyperref}
+
+\begin{document}
+\title{ORIE 4741 Project Proposal}
+\author{Yuyang Chen(yc2324), Xinyun Tang(xt222), Xiaoxi Zhang(xz577)}
+\date{}
+
+\maketitle
+\section{The Problem}
+Restaurant inspections are conducted by Department of Health in most cities for food security control. Example inspections include food handling practices, product temperatures, personal hygiene, facility maintenance and pest control. Although data is open to the public, general population only realize what restaurants have health issues after they fail inspections. We are interested to see how restaurant review data from Yelp can help us to predict whether a restaurant can pass an inspection. Furthermore, we can even use the same set of data to determine a healthy level for restaurants in those cities with more specified health policies. 
+
+We believe our project can help to ensure people can eat healthy and safely while dining out. Also, we can better allocate the health department resources on inspection work, along with the combination of public data on Yelp. 
+
+\section{Datasets description}
+
+\subsection{Yelp Dataset}
+The independent variables in our problem come from \url{https://www.yelp.com/dataset/challenge}. This dataset contains extensive description about business owners on Yelp.com, including their overall ratings, and customer reviews. The key features we are interested in are the type of cuisine a restaurant sells, their overall rating, and features extracted from customer reviews (e.g. whether people had food poisoning and whether the restaurant is expensive, etc.).  
+\subsection{Inspection datasets}
+The datasets contain the information about restaurant address, category, inspection date, violation type or code, description of violations, risk level, and the inspection score.
+
+The datasets contain information about restaurant address, category, inspection date, violation type or code, description of violations, risk level and the inspection score. Date information enables us to analyze recurrent inspections on certain restaurants and to answer whether previous inspection act a positive or negative predictor of inspection results and whether a seasonal trend exists. We will use address information to tell whether specific neighborhoods have higher risks of violations. Useful text information of violations can be extracted from violation types and descriptions so that we can look for specific texts from Yelp reviews to form our feature space. We plan to use inspection datasets from San Francisco, New York City and Chicago. They adopt different grading systems for restaurant inspections, which are continuous scores, level scores and pass or fail, respectively. This difference enables us to build different models, such as regression, clustering and classification for predicting the inspection results of restaurants and giving expected healthy level.
+\end{document}
